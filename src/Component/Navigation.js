@@ -7,6 +7,10 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import logo from "./../logo.png";
+
+import { Link } from 'react-router-dom';
+
 
 
 const Navigation = ({ setSearch, setStars, addMovie }) => {
@@ -28,11 +32,12 @@ const Navigation = ({ setSearch, setStars, addMovie }) => {
     <>
       <Navbar bg="dark" variant="dark" style={{ justifyContent: "space-around", position: 'sticky', top: '0', zIndex: "999" }}>
         <Container style={{ width: "40%" }}>
-          <Navbar.Brand href="/"><img style={{ marginLeft: "100px", width: "110px" }} src="./logo.png" alt='logo' /></Navbar.Brand>
+          <Navbar.Brand href="/"><img style={{ marginLeft: "100px", width: "110px" }} src={logo} alt='logo' /></Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#">My List</Nav.Link>
-            <Nav.Link href="#">Latest</Nav.Link>
+           <Link to={'/'}>Home</Link> 
+           <Link to={'/movies'}>Movies</Link> 
+           <Link to={'/mylist'}>My List</Link>
+           <Link to={'/latest'}>Latest</Link>
           </Nav>
         </Container>
 
