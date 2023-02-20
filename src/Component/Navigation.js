@@ -18,12 +18,13 @@ const Navigation = ({ setSearch, setStars, addMovie }) => {
     {
       name: " ",
       posterurl: "",
+      trailerurl: "",
       description: "",
       rating: 1,
     });
 
   const handleSubmit = () => {
-    addMovie({ name: newmovie.name, description: newmovie.description, posterurl: newmovie.posterurl, rating: newmovie.rating });
+    addMovie({ name: newmovie.name, trailerurl:newmovie.trailerurl, description: newmovie.description, posterurl: newmovie.posterurl, rating: newmovie.rating });
   };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -75,6 +76,10 @@ const Navigation = ({ setSearch, setStars, addMovie }) => {
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Poster</Form.Label>
                 <Form.Control type="text" placeholder="Movie Poster" required onChange={(e) => (setNewmovie({ ...newmovie, posterurl: e.target.value }))} />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Label>Trailer</Form.Label>
+                <Form.Control type="text" placeholder="Movie Poster" required onChange={(e) => (setNewmovie({ ...newmovie, trailerurl: e.target.value }))} />
               </Form.Group>
 
               <Form.Label>Rating</Form.Label>
