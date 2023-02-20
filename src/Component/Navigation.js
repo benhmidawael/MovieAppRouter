@@ -24,7 +24,7 @@ const Navigation = ({ setSearch, setStars, addMovie }) => {
     });
 
   const handleSubmit = () => {
-    addMovie({ name: newmovie.name, trailerurl:newmovie.trailerurl, description: newmovie.description, posterurl: newmovie.posterurl, rating: newmovie.rating });
+    addMovie({ name: newmovie.name, trailerurl:newmovie.trailerurl, description: newmovie.description, posterurl: newmovie.posterurl, rating: parseInt(newmovie.rating) });
   };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
