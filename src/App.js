@@ -185,24 +185,19 @@ function App() {
     <>
       <Navigation setStars={setStars} setSearch={setSearch} addMovie={addMovie} />
       <div className='app'>
-        {/* <ReactPlayer
-          className="player"
-          width={"900px"}
-          loop={true}
-          url='https://www.youtube.com/watch?v=xl8zdCY-abw' /> */}
+        
 
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='*' element={<h1>Not Found</h1>}/>
           <Route path='/latest' element={<Latest />}/>
           <Route path='/movies' element={<MovieList movies={movies} search={search} stars={stars} />}/>
-          <Route path='/movie/details' element={<MovieDetails />}/>
+          <Route path='/movies/details' element={<MovieDetails />}/>
           <Route path='/mylist' element={<MyList />}/>
         </Routes>
 
 
 
-        {/* <MovieList movies={movies} search={search} stars={stars} /> */}
       </div>
     </>
   );

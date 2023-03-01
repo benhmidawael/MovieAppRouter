@@ -24,7 +24,7 @@ const Navigation = ({ setSearch, setStars, addMovie }) => {
     });
 
   const handleSubmit = () => {
-    addMovie({ name: newmovie.name, trailerurl:newmovie.trailerurl, description: newmovie.description, posterurl: newmovie.posterurl, rating: parseInt(newmovie.rating) });
+    addMovie({ name: newmovie.name, trailerurl: newmovie.trailerurl, description: newmovie.description, posterurl: newmovie.posterurl, rating: parseInt(newmovie.rating) });
   };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -35,10 +35,10 @@ const Navigation = ({ setSearch, setStars, addMovie }) => {
         <Container style={{ width: "40%" }}>
           <Navbar.Brand href="/"><img style={{ marginLeft: "100px", width: "110px" }} src={logo} alt='logo' /></Navbar.Brand>
           <Nav className="me-auto">
-           <Link to={'/'}>Home</Link> 
-           <Link to={'/movies'}>Movies</Link> 
-           <Link to={'/mylist'}>My List</Link>
-           <Link to={'/latest'}>Latest</Link>
+            <Link to={'/'}>Home</Link>
+            <Link to={'/movies'}>Movies</Link>
+            <Link to={'/mylist'}>My List</Link>
+            <Link to={'/latest'}>Latest</Link>
           </Nav>
         </Container>
 

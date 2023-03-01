@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const MovieCard = ({ el }) => {
   return (
     <>
-      <Link  to={"/movie/details"} state={el} className='MovieBox'>
+      <Link  to={"/movies/details"} state={el} className='MovieBox'>
         <div className='postercontainer'>
           <img src={el.posterurl} alt='poster' />
 
